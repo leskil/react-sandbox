@@ -4,5 +4,5 @@ import StatelessSample from "./components/stateless-sample"
 
 ReactDOM.render(
     <StatelessSample compiler="Typescript" framework="React" />,
-    document.getElementById("app")
+    document.getElementById("statelessSample")
 )
