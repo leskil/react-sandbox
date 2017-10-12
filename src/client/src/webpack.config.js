@@ -2,7 +2,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var Path = require("path");
 
 module.exports = {
-    entry: "./app.ts",
+    entry: "./index.tsx",
     output: {
         filename: "bundle.js",
         path: Path.resolve(__dirname, "../assets")
