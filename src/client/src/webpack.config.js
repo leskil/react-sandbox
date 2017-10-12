@@ -8,11 +8,15 @@ module.exports = {
         path: Path.resolve(__dirname, "../assets")
     },
     devtool: "source-map",
-    watch: false,
+    watch: true,
+    devServer: {
+        contentBase: "./.."
+    },
     resolve: {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".less", ".css"],
         modules: [
-            "./node_modules/**"
+            Path.join(__dirname, 'node_modules')
+            //"./node_modules/**"
             //Path.resolve("./node_modules")
         ]
         //modulesDirectories: ["./node_modules"]
