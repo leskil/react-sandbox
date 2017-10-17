@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom"
 import StatelessSample from "./components/stateless-sample"
 import StatefullSample from "./components/statefull-sample"
 import FormsSample from "./components/forms-sample"
+import TodoList from "./components/todo-list"
 
 ReactDOM.render(
     <StatelessSample compiler="Typescript" framework="React" />,
@@ -17,4 +18,9 @@ ReactDOM.render(
 ReactDOM.render(
     <FormsSample />,
     document.getElementById("formsSample")
+)
+
+ReactDOM.render(
+    <TodoList />,
+    document.getElementById("todoList")
 )
