@@ -1,32 +1,48 @@
-import * as React from "react";
-import { ListItem } from "./list-item";
-import { TodoItemList } from "./todo-item-list/todo-item-list"; 
+import * as React from "react"
+import { ListItem } from "./list-item"
+import { TodoItemList } from "./todo-item-list/todo-item-list"
+import { AddListItem } from "./add-list-item/add-list-item"
 
-export class TodoList extends React.Component<{}, {}> {
+export class TodoListState {
+    items: Array<ListItem>
+}
 
-    items: Array<ListItem>;
+export class TodoList extends React.Component<{}, TodoListState> {
 
     constructor() {
         super();
-        this.items = [
+        this.state = {
+            items: [
             { id: 1, completed: false, text: "Learn React"},
             { id: 2, completed: false, text: "Learn Typescript"},
             { id: 3, completed: false, text: "Install Code"},
             { id: 4, completed: true, text: "Pour coffee"}
-        ];
+        ]};
 
         this.handleExport = this.handleExport.bind(this)
+        this.handleAddItem = this.handleAddItem.bind(this)
     }
 
     handleExport(e: React.FormEvent<HTMLButtonElement>) {
         e.preventDefault()
-        console.log(this.items)
+        console.log(this.state.items)
+    }
+
+    handleAddItem(e: string) {
+        this.setState({
+            items: this.state.items.concat({
+                completed: false,
+                text: e,
+                id: 0            
+            })
+        })
     }
 
     render() {
         return <div>
             <h1>Todo list</h1>
-            <TodoItemList items={this.items} />
+            <AddListItem onAddItem={this.handleAddItem} />
+            <TodoItemList items={this.state.items} />
             <button onClick={this.handleExport}>Export</button>
         </div>
     }
