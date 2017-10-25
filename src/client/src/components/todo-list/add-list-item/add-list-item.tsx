@@ -8,7 +8,7 @@ export interface AddListItemState {
     text: string
 }
 
-export class AddListItem extends React.Component<AddListItemProps, AddListItemState> {
+export class AddListItem extends React.PureComponent<AddListItemProps, AddListItemState> {
 
     constructor() {
         super();

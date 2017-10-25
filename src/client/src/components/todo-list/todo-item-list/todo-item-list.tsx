@@ -6,7 +6,7 @@ export interface TodoItemListProps {
     items: Array<ListItem>
 }
 
-export class TodoItemList extends React.Component<TodoItemListProps, {}> {
+export class TodoItemList extends React.PureComponent<TodoItemListProps, {}> {
 
     constructor() {
         super();

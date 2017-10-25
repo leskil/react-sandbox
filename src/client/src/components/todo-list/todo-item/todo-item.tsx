@@ -11,7 +11,7 @@ export interface TodoItemState {
     text: string
 }
 
-export class TodoItem extends React.Component<TodoItemProps, TodoItemState> {
+export class TodoItem extends React.PureComponent<TodoItemProps, TodoItemState> {
 
     constructor(props: TodoItemProps) {
         super();

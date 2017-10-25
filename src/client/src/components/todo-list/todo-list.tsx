@@ -7,7 +7,7 @@ export class TodoListState {
     items: Array<ListItem>
 }
 
-export class TodoList extends React.Component<{}, TodoListState> {
+export class TodoList extends React.PureComponent<{}, TodoListState> {
 
     constructor() {
         super();
