@@ -10,8 +10,7 @@ module.exports = {
     devtool: "source-map",
     watch: true,
     devServer: {
-        contentBase: "./..",
-        historyApiFallback: true
+        contentBase: "./.."
     },
     resolve: {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".less", ".css"],

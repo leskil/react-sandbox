@@ -2,7 +2,7 @@
   "name": "react-sandbox",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --open --inline --hot"
+    "start": "webpack-dev-server --inline --hot"
   },
   "devDependencies": {
     "@types/react": "^16.0.10",
