@@ -5,6 +5,7 @@ import StatefullSample from "./components/statefull-sample"
 import FormsSample from "./components/forms-sample"
 import TodoList from "./components/todo-list"
 import RouterSample from "./components/router-sample"
+import ReduxSample from "./components/redux-sample";
 
 ReactDOM.render(
     <StatelessSample compiler="Typescript" framework="React" />,
@@ -29,4 +30,9 @@ ReactDOM.render(
 ReactDOM.render(
     <RouterSample />,
     document.getElementById("routerSample")
+)
+
+ReactDOM.render(
+    <ReduxSample />,
+    document.getElementById("reduxSample")
 )
